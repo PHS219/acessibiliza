@@ -1,0 +1,722 @@
+/* =====================================================
+   PÁGINAS INTERNAS
+===================================================== */
+
+.page-hero {
+    padding: 52px 0 30px;
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(201, 243, 92, 0.16),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #f4faf7,
+            #e4f1ed
+        );
+}
+
+.page-hero .title {
+    max-width: 920px;
+}
+
+.page-hero .subtitle {
+    max-width: 760px;
+}
+
+
+/* =====================================================
+   EXPLORAR
+===================================================== */
+
+.search-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.filter-panel {
+    position: sticky;
+    top: 95px;
+    align-self: start;
+}
+
+.check {
+    min-height: 47px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.check input {
+    width: 21px;
+    height: 21px;
+    accent-color: var(--brand);
+}
+
+
+/* =====================================================
+   DETALHES
+===================================================== */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(360px, 0.85fr);
+    gap: 24px;
+}
+
+.detail-visual {
+    min-height: 450px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #75452a, #d5a16f);
+    color: #ffffff;
+    font-size: 7rem;
+}
+
+.detail-visual.green {
+    background: linear-gradient(145deg, #335c46, #9ec49e);
+}
+
+.detail-visual.blue {
+    background: linear-gradient(145deg, #40576b, #9ac3d2);
+}
+
+.access-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.access-item {
+    padding: 14px;
+    border-radius: 14px;
+    background: var(--alt);
+}
+
+
+/* =====================================================
+   HISTÓRICO
+===================================================== */
+
+.timeline {
+    margin-left: 14px;
+    padding-left: 24px;
+    border-left: 3px solid var(--line);
+}
+
+.timeline article {
+    position: relative;
+}
+
+.timeline article::before {
+    position: absolute;
+    top: 27px;
+    left: -34px;
+    width: 14px;
+    height: 14px;
+    border: 3px solid var(--surface);
+    border-radius: 50%;
+    background: var(--brand);
+    content: "";
+}
+
+
+/* =====================================================
+   RANKING
+===================================================== */
+
+.ranking-hero {
+    padding: 52px 0 0;
+    background: var(--deep);
+    color: #ffffff;
+    text-align: center;
+}
+
+.podium {
+    height: 245px;
+    margin-top: 26px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.podium > div {
+    width: min(30%, 260px);
+    height: 145px;
+    padding: 22px 8px;
+    border-radius: 18px 18px 0 0;
+    background: rgba(255, 255, 255, 0.09);
+    text-align: center;
+}
+
+.podium .winner {
+    height: 200px;
+    background: var(--accent);
+    color: var(--deep);
+}
+
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 24px;
+}
+
+.avatar-xl {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 16px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.stats strong {
+    display: block;
+    color: var(--brand);
+    font-size: 1.5rem;
+}
+
+.setting {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.setting input {
+    width: 23px;
+    height: 23px;
+    accent-color: var(--brand);
+}
+
+
+/* =====================================================
+   AVALIAÇÃO
+===================================================== */
+
+.stars {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 4px;
+    border: 0;
+    background: transparent;
+    color: #b9c0bd;
+    font-size: 2.4rem;
+}
+
+.star.active {
+    color: #e4a11b;
+}
+
+
+/* =====================================================
+   LAYOUT DA ROTA
+===================================================== */
+
+.route-page-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(430px, 0.85fr);
+    gap: 26px;
+    align-items: start;
+}
+
+.route-map-column,
+.route-options-column {
+    min-width: 0;
+    display: grid;
+    gap: 18px;
+}
+
+
+/* =====================================================
+   MAPA DA ROTA
+===================================================== */
+
+.accessible-map {
+    position: sticky;
+    top: 92px;
+    min-height: 690px;
+    overflow: hidden;
+}
+
+.route-map-header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    z-index: 15;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 30px rgba(22, 68, 59, 0.12);
+    backdrop-filter: blur(12px);
+}
+
+.route-map-header h2 {
+    margin-top: 4px;
+    font-size: 1.3rem;
+}
+
+.route-status {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--deep);
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+
+.accessible-map-svg {
+    width: 100%;
+    height: 690px;
+    display: block;
+}
+
+.route-path {
+    animation: route-dash 3s linear infinite;
+}
+
+@keyframes route-dash {
+    to {
+        stroke-dashoffset: -56;
+    }
+}
+
+
+/* =====================================================
+   RÓTULOS DO MAPA
+===================================================== */
+
+.route-map-label {
+    position: absolute;
+    z-index: 12;
+    min-width: 180px;
+    padding: 11px 13px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 12px 28px rgba(21, 64, 56, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.route-map-label strong,
+.route-map-label small {
+    display: block;
+}
+
+.route-map-label small {
+    color: #617270;
+}
+
+.route-label-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+}
+
+.route-label-icon.origin {
+    background: #e8efff;
+    color: #3b70db;
+}
+
+.route-label-icon.destination {
+    background: var(--soft);
+    color: var(--brand);
+}
+
+.route-origin-label {
+    bottom: 50px;
+    left: 24px;
+}
+
+.route-destination-label {
+    top: 125px;
+    right: 22px;
+}
+
+
+/* =====================================================
+   RESUMO DA ROTA
+===================================================== */
+
+.route-summary {
+    display: grid;
+    gap: 20px;
+}
+
+.route-summary-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.route-summary-metrics > div {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.route-summary-metrics > div + div {
+    border-left: 1px solid var(--line);
+}
+
+.route-summary-metrics strong,
+.route-summary-metrics small {
+    display: block;
+}
+
+.route-summary-metrics strong {
+    color: var(--brand);
+    font-size: 1.25rem;
+}
+
+.route-summary-metrics small {
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   DESTINO
+===================================================== */
+
+.destination-card h2 {
+    margin: 8px 0 3px;
+    font-size: 1.7rem;
+}
+
+
+/* =====================================================
+   FORMAS DE LOCOMOÇÃO
+===================================================== */
+
+.section-title {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.transport-count {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--alt);
+    color: var(--brand);
+    font-size: 0.74rem;
+    font-weight: 800;
+}
+
+.transport-options {
+    display: grid;
+    gap: 11px;
+}
+
+.transport-option {
+    width: 100%;
+    min-height: 116px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns:
+        50px
+        minmax(0, 1fr)
+        78px
+        24px;
+    gap: 12px;
+    align-items: center;
+    border: 2px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+    text-align: left;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.transport-option:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand);
+}
+
+.transport-option.active {
+    border-color: var(--brand);
+    background: var(--soft);
+}
+
+.transport-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--alt);
+    font-size: 1.5rem;
+}
+
+.transport-description {
+    min-width: 0;
+}
+
+.transport-description strong,
+.transport-description small,
+.transport-meta strong,
+.transport-meta small {
+    display: block;
+}
+
+.transport-description small {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.transport-features {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.transport-features span {
+    padding: 4px 7px;
+    border-radius: 999px;
+    background: var(--alt);
+    color: var(--brand);
+    font-size: 0.66rem;
+    font-weight: 800;
+}
+
+.transport-meta {
+    text-align: right;
+}
+
+.transport-meta small {
+    color: var(--muted);
+    font-size: 0.7rem;
+}
+
+.transport-check {
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: transparent;
+}
+
+.transport-option.active .transport-check {
+    border-color: var(--brand);
+    background: var(--brand);
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   INSTRUÇÕES
+===================================================== */
+
+.route-instructions h2 {
+    margin: 5px 0 13px;
+}
+
+.route-instructions .route-step {
+    min-height: 74px;
+    padding: 12px 0;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 11px;
+    border-bottom: 1px solid var(--line);
+}
+
+.route-instructions .route-step:last-child {
+    border-bottom: 0;
+}
+
+.route-instructions .route-step > span {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--brand);
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.route-instructions .route-step p {
+    margin-top: 3px;
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   AÇÕES
+===================================================== */
+
+.route-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.route-actions .btn {
+    width: 100%;
+}
+
+
+/* =====================================================
+   MODO ESCURO
+===================================================== */
+
+body.dark .page-hero {
+    background: linear-gradient(145deg, #081613, #122a25);
+}
+
+body.dark .route-map-header,
+body.dark .route-map-label {
+    border-color: var(--line);
+    background: rgba(16, 37, 34, 0.97);
+}
+
+body.dark .accessible-map-svg > rect {
+    fill: #1a302b;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1120px) {
+    .route-page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .accessible-map {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .search-layout,
+    .detail-grid,
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-panel {
+        position: static;
+    }
+
+    .access-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .accessible-map,
+    .accessible-map-svg {
+        min-height: 590px;
+        height: 590px;
+    }
+
+    .route-map-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .route-summary-metrics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .transport-option {
+        grid-template-columns:
+            46px
+            minmax(0, 1fr)
+            68px;
+    }
+
+    .transport-check {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .route-map-label {
+        min-width: 145px;
+        padding: 9px;
+        font-size: 0.76rem;
+    }
+
+    .route-actions,
+    .route-summary-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .route-summary-metrics > div + div {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+    }
+
+    .transport-option {
+        min-height: 130px;
+        align-items: start;
+    }
+
+    .podium {
+        height: auto;
+        display: grid;
+        gap: 10px;
+    }
+
+    .podium > div,
+    .podium .winner {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+}

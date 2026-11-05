@@ -1,0 +1,362 @@
+.login-page {
+    min-height: calc(100vh - 72px);
+    display: grid;
+    align-items: center;
+    padding: 55px 0 75px;
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(201, 243, 92, 0.25),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 85%,
+            rgba(7, 107, 93, 0.15),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            #f7fbf9,
+            #e4f1ed
+        );
+}
+
+.login-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(440px, 0.7fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.login-introduction {
+    position: relative;
+}
+
+.login-introduction .title {
+    max-width: 700px;
+}
+
+.login-introduction .subtitle {
+    max-width: 630px;
+}
+
+.benefit-list {
+    max-width: 620px;
+    margin-top: 35px;
+    display: grid;
+    gap: 13px;
+}
+
+.benefit {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 14px;
+    align-items: center;
+    border: 1px solid rgba(216, 231, 224, 0.95);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(10px);
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: var(--soft);
+    color: var(--brand);
+    font-size: 23px;
+}
+
+.benefit h2 {
+    margin-bottom: 3px;
+    font-size: 1rem;
+}
+
+.benefit p {
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+.login-card {
+    padding: 30px;
+}
+
+.login-card-header {
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.login-logo {
+    width: 53px;
+    height: 53px;
+    flex: 0 0 53px;
+}
+
+.login-card-header h2 {
+    margin-top: 4px;
+    font-size: 1.65rem;
+}
+
+.password-control {
+    position: relative;
+}
+
+.password-control .input {
+    padding-right: 55px;
+}
+
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    width: 42px;
+    min-height: 42px;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 11px;
+    background: transparent;
+    color: var(--brand);
+}
+
+.login-options {
+    margin: 4px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+}
+
+.remember-option input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--brand);
+}
+
+.text-action {
+    min-height: 40px;
+    border: 0;
+    background: transparent;
+    color: var(--brand);
+    font-weight: 700;
+}
+
+.login-submit {
+    width: 100%;
+}
+
+.login-divider {
+    margin: 22px 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.login-divider::before,
+.login-divider::after {
+    height: 1px;
+    flex: 1;
+    background: var(--line);
+    content: "";
+}
+
+.google-login {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: var(--surface);
+    font-weight: 800;
+}
+
+.google-login:hover {
+    border-color: var(--brand);
+    background: var(--alt);
+}
+
+.google-symbol {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            #4285f4 0deg 90deg,
+            #34a853 90deg 180deg,
+            #fbbc05 180deg 270deg,
+            #ea4335 270deg 360deg
+        );
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.assistant-panel {
+    margin-top: 25px;
+    padding: 18px;
+    border: 1px solid rgba(7, 107, 93, 0.2);
+    border-radius: 18px;
+    background: var(--soft);
+}
+
+.assistant-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.assistant-icon {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: var(--brand);
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.assistant-heading h3 {
+    margin-top: 3px;
+}
+
+.assistant-panel > p {
+    margin: 12px 0;
+    color: var(--muted);
+    font-size: 0.87rem;
+}
+
+.assistant-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.assistant-actions .btn {
+    flex: 1;
+    min-width: 180px;
+}
+
+.assistant-status {
+    min-height: 21px;
+    margin-bottom: 0 !important;
+    color: var(--brand) !important;
+    font-weight: 700;
+}
+
+.accessibility-shortcut {
+    margin-top: 20px;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    border-radius: 14px;
+    background: var(--alt);
+}
+
+.accessibility-shortcut p {
+    font-size: 0.85rem;
+}
+
+.accessibility-shortcut a {
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.login-disclaimer {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 0.74rem;
+    text-align: center;
+}
+
+body.dark .login-page {
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(201, 243, 92, 0.08),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #081613,
+            #122a25
+        );
+}
+
+body.dark .benefit {
+    border-color: var(--line);
+    background: rgba(16, 37, 34, 0.85);
+}
+
+@media (max-width: 950px) {
+    .login-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .login-introduction {
+        max-width: 760px;
+    }
+
+    .benefit-list {
+        max-width: none;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .benefit {
+        grid-template-columns: 1fr;
+        align-content: start;
+    }
+}
+
+@media (max-width: 700px) {
+    .login-page {
+        padding-top: 35px;
+    }
+
+    .benefit-list {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit {
+        grid-template-columns: 50px 1fr;
+    }
+
+    .login-card {
+        padding: 21px;
+    }
+
+    .login-options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .accessibility-shortcut {
+        grid-template-columns: 28px 1fr;
+    }
+
+    .accessibility-shortcut a {
+        grid-column: 2;
+    }
+}

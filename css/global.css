@@ -1,0 +1,648 @@
+:root {
+    --ink: #142d2b;
+    --muted: #617270;
+    --brand: #076b5d;
+    --deep: #064b44;
+    --accent: #c9f35c;
+    --soft: #effbd2;
+    --surface: #fff;
+    --alt: #f3f6f4;
+    --line: #dfe8e4;
+    --gold: #9b6a00;
+    --danger: #b93838;
+    --shadow: 0 18px 48px rgba(15, 75, 65, 0.12);
+    --r: 20px;
+    --max: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--alt);
+    color: var(--ink);
+    font: 16px/1.5 Inter, Arial, sans-serif;
+    
+    /* Estrutura infalível para colar o rodapé em baixo */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    min-height: 46px;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+}
+
+a {
+    color: var(--brand);
+}
+
+*:focus-visible {
+    outline: 3px solid #f3a900;
+    outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.035em;
+}
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+.skip {
+    position: fixed;
+    top: -70px;
+    left: 16px;
+    z-index: 999;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.skip:focus {
+    top: 16px;
+}
+
+/* =====================================================
+   ESTRUTURA GERAL
+===================================================== */
+
+.container {
+    width: min(calc(100% - 32px), var(--max));
+    margin: auto;
+}
+
+.page {
+    padding: 44px 0 80px;
+}
+
+.pad {
+    padding: 22px;
+}
+
+.stack {
+    display: grid;
+    gap: 16px;
+}
+
+.grid {
+    display: grid;
+    gap: 18px;
+}
+
+.cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--line);
+    background: color-mix(
+        in srgb,
+        var(--surface) 92%,
+        transparent
+    );
+    backdrop-filter: blur(14px);
+}
+
+.header-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--accent);
+    color: var(--brand);
+    transform: rotate(-5deg);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.main-nav a {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background: var(--soft);
+    color: var(--brand);
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.icon-btn,
+.btn {
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.icon-btn {
+    width: 46px;
+    padding: 0;
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.btn-primary {
+    background: var(--brand);
+    color: #fff;
+}
+
+.btn-secondary {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.btn-lime {
+    background: var(--accent);
+    color: var(--deep);
+}
+.btn-details {
+    width: 100%;
+    margin-top: 16px;
+    background: var(--deep); /* Usa o seu verde mais escuro (#064b44) no modo claro */
+    color: #ffffff;
+    transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.3s ease;
+}
+
+/* Quando o modo escuro for ativado no body */
+body.dark .btn-details {
+    background: var(--ink); /* No modo dark, a sua variável --ink é uma cor muito clara (#eff8f4) */
+    color: var(--surface); /* No modo dark, a variável --surface é um verde bem escuro (#102522) */
+}
+
+/* Efeito tátil (responsivo) ao passar o rato */
+.btn-details:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.btn-details:active {
+    transform: translateY(0); /* Dá a sensação de botão a ser pressionado */
+}
+
+/* =====================================================
+   TIPOGRAFIA
+===================================================== */
+
+.eyebrow {
+    color: var(--brand);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+}
+
+.title {
+    margin: 10px 0 18px;
+    font-size: clamp(2.2rem, 5.5vw, 4.8rem);
+    line-height: 1.02;
+}
+
+.subtitle {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.score {
+    color: var(--gold);
+    font-weight: 900;
+}
+
+/* =====================================================
+   CARDS E SEÇÕES
+===================================================== */
+
+.card {
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.section-head {
+    margin: 34px 0 16px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section-head h2 {
+    font-size: 1.7rem;
+}
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.field {
+    display: grid;
+    gap: 7px;
+}
+
+.field label {
+    font-weight: 800;
+}
+
+.input {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    color: var(--ink);
+}
+
+textarea.input {
+    min-height: 120px;
+}
+
+/* =====================================================
+   BADGES E CHIPS
+===================================================== */
+
+.badge {
+    padding: 6px 9px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 999px;
+    background: var(--soft);
+    color: var(--brand);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    min-height: 40px;
+    padding: 8px 13px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    font-weight: 700;
+}
+
+.chip.active {
+    border-color: var(--brand);
+    background: var(--brand);
+    color: #fff;
+}
+
+/* =====================================================
+   CARDS DE LOCAIS
+===================================================== */
+
+.place-card {
+    overflow: hidden;
+}
+
+.place-image {
+    position: relative;
+    height: 190px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(
+        145deg,
+        #75452a,
+        #d5a16f
+    );
+    color: #fff;
+    font-size: 4rem;
+}
+
+.place-image.green {
+    background: linear-gradient(
+        145deg,
+        #335c46,
+        #9ec49e
+    );
+}
+
+.place-image.blue {
+    background: linear-gradient(
+        145deg,
+        #40576b,
+        #9ac3d2
+    );
+}
+
+.favorite {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: var(--ink); /* Garante que a cor acompanhe o tema (escuro no claro, claro no escuro) */
+    font-size: 1.5rem; /* Sobrescreve a fonte gigante herdada da imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place-body {
+    padding: 18px;
+}
+
+.place-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.place-body p {
+    margin-top: 4px;
+    color: var(--muted);
+}
+
+.pills {
+    margin: 13px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pills span {
+    padding: 5px 8px;
+    border-radius: 7px;
+    background: var(--alt);
+    color: var(--brand);
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+/* =====================================================
+   MAPA GENÉRICO
+===================================================== */
+
+.map {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    background-color: #e7eee9;
+    background-image:
+        linear-gradient(
+            35deg,
+            transparent 45%,
+            #dce8e1 46% 54%,
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            transparent 46%,
+            #d7e5dc 47% 53%,
+            transparent 54%
+        );
+    background-size:
+        110px 110px,
+        150px 150px;
+}
+
+.road {
+    position: absolute;
+    top: 52%;
+    left: -10%;
+    width: 120%;
+    height: 42px;
+    background: #fff;
+    transform: rotate(-12deg);
+}
+
+.route {
+    position: absolute;
+    top: 21%;
+    left: 17%;
+    width: 48%;
+    height: 65%;
+    border: 9px solid var(--brand);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 48%;
+    transform: rotate(-10deg);
+}
+
+.pin {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50% 50% 50% 8px;
+    background: var(--brand);
+    color: #fff;
+    box-shadow: var(--shadow);
+    transform: rotate(-45deg);
+}
+
+.pin span {
+    display: block;
+    transform: rotate(45deg);
+}
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.footer {
+    margin-top: 70px;
+    padding: 40px 0;
+    background: var(--deep);
+    color: #d9ebe6;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+}
+
+.footer a {
+    color: #d9ebe6;
+}
+
+/* =====================================================
+   MENSAGENS
+===================================================== */
+
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    z-index: 100;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #142d2b;
+    color: #fff;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: 0.2s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* =====================================================
+   MODO ESCURO
+===================================================== */
+
+body.dark {
+    --ink: #eff8f4;
+    --muted: #a1b9b3;
+    --surface: #102522;
+    --alt: #172f2b;
+    --line: #29433e;
+    --soft: #263c32;
+}
+
+/* =====================================================
+   ALTO CONTRASTE
+===================================================== */
+
+body.contrast {
+    --ink: #000;
+    --muted: #222;
+    --brand: #005fcc;
+    --deep: #000;
+    --accent: #ffdf00;
+    --soft: #fff5a6;
+    --surface: #fff;
+    --alt: #fff;
+    --line: #000;
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 850px) {
+    .header-inner {
+        flex-wrap: wrap; /* Permite que o menu desça para a linha de baixo */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .main-nav {
+        display: flex; /* Remove o display: none antigo */
+        width: 100%;
+        overflow-x: auto; /* Cria o efeito de arrastar para o lado com o dedo */
+        gap: 8px;
+        padding-bottom: 5px;
+    }
+
+    /* Esconde a barra de rolagem visual para ficar mais limpo */
+    .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cols-2,
+    .cols-3,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-actions .btn {
+        display: none;
+    }
+
+    .page {
+        padding-top: 28px;
+    }
+
+    .map {
+        min-height: 390px;
+    }
+}

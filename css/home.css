@@ -1,0 +1,640 @@
+/* =====================================================
+   ACESSIBILIZA
+   PÁGINA INICIAL
+   Arquivo: css/home.css
+===================================================== */
+
+
+/* =====================================================
+   HERO PRINCIPAL
+===================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 72px 0 58px;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(201, 243, 92, 0.22),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #f7fbf9,
+            #e1f0eb
+        );
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(520px, 1.08fr);
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-copy .title {
+    max-width: 720px;
+}
+
+.hero-copy .subtitle {
+    max-width: 630px;
+}
+
+.hero-actions {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* =====================================================
+   ÁREA DO MAPA
+===================================================== */
+
+.hero-panel {
+    position: relative;
+    min-width: 0;
+}
+
+.hero-map {
+    position: relative;
+    width: 100%;
+    min-height: 570px;
+    overflow: hidden;
+    border: 1px solid rgba(205, 222, 215, 0.95);
+    border-radius: 24px;
+    background: #e7f0ec;
+    box-shadow:
+        0 22px 55px rgba(20, 70, 61, 0.14);
+}
+
+/* Faz o SVG desenhado no HTML preencher todo o fundo do cartão */
+.map-route-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Garante que os cliques passam pelo mapa e acertam nos botões */
+}
+
+
+/* =====================================================
+   CABEÇALHO DO MAPA
+===================================================== */
+
+.map-toolbar {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    left: 22px;
+    z-index: 15;
+    min-height: 78px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border: 1px solid rgba(216, 229, 224, 0.95);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow:
+        0 12px 30px rgba(22, 68, 59, 0.11);
+    backdrop-filter: blur(12px);
+}
+
+.map-heading h2 {
+    margin: 3px 0 0;
+    font-size: 1.35rem;
+}
+
+
+/* =====================================================
+   PRÉVIA DO MAPA
+   A rota detalhada fica em pages/rota.html
+===================================================== */
+
+.map-preview {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background-color: #e7f0ec;
+    background-image:
+        linear-gradient(
+            35deg,
+            transparent 46%,
+            rgba(203, 221, 213, 0.6) 47% 53%,
+            transparent 54%
+        ),
+        linear-gradient(
+            145deg,
+            transparent 46%,
+            rgba(210, 226, 219, 0.65) 47% 53%,
+            transparent 54%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(220, 234, 227, 0.45) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(220, 234, 227, 0.45) 1px,
+            transparent 1px
+        );
+    background-size:
+        170px 130px,
+        220px 165px,
+        60px 60px,
+        60px 60px;
+}
+
+
+/* =====================================================
+   RUAS DA PRÉVIA
+===================================================== */
+
+.map-preview-street {
+    position: absolute;
+    z-index: 1;
+    border: 1px solid rgba(207, 221, 215, 0.78);
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow:
+        0 3px 10px rgba(28, 72, 63, 0.05);
+}
+
+.street-horizontal {
+    top: 48%;
+    left: -10%;
+    width: 120%;
+    height: 42px;
+    transform: rotate(-12deg);
+}
+
+.street-diagonal {
+    top: -15%;
+    left: 42%;
+    width: 44px;
+    height: 135%;
+    transform: rotate(-19deg);
+}
+
+.street-vertical {
+    top: -10%;
+    right: 18%;
+    width: 34px;
+    height: 120%;
+    transform: rotate(11deg);
+}
+
+
+/* =====================================================
+   PONTOS ACESSÍVEIS
+===================================================== */
+
+.preview-pin {
+    position: absolute;
+    z-index: 8;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #ffffff;
+    box-shadow:
+        0 12px 25px rgba(16, 75, 64, 0.24);
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.preview-pin:hover {
+    transform: translateY(-5px);
+    background: var(--deep);
+    box-shadow:
+        0 18px 34px rgba(16, 75, 64, 0.3);
+}
+
+.preview-pin span {
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.preview-pin-one {
+    top: 32%;
+    right: 19%;
+}
+
+.preview-pin-two {
+    top: 53%;
+    left: 25%;
+}
+
+.preview-pin-three {
+    right: 31%;
+    bottom: 28%;
+}
+
+
+/* =====================================================
+   LOCALIZAÇÃO DO USUÁRIO
+===================================================== */
+
+.preview-location {
+    position: absolute;
+    bottom: 27%;
+    left: 17%;
+    z-index: 8;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 7px solid #ffffff;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow:
+        0 10px 22px rgba(30, 77, 68, 0.22);
+}
+
+.preview-location span {
+    width: 18px;
+    height: 18px;
+    display: block;
+    border-radius: 50%;
+    background: #3b70db;
+}
+
+.preview-location::after {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border: 2px solid rgba(59, 112, 219, 0.25);
+    border-radius: 50%;
+    content: "";
+}
+
+
+/* =====================================================
+   PAINEL INFERIOR DO MAPA
+===================================================== */
+
+.map-preview-footer {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+    z-index: 12;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow:
+        0 16px 38px rgba(18, 70, 60, 0.14);
+    backdrop-filter: blur(12px);
+}
+
+.map-preview-footer h3 {
+    margin: 4px 0;
+    color: #142d2b;
+}
+
+.map-preview-footer p {
+    margin: 0;
+    color: #617270;
+    font-size: 0.85rem;
+}
+
+.map-preview-footer .btn {
+    flex: 0 0 auto;
+}
+
+
+/* =====================================================
+   CATEGORIAS
+===================================================== */
+
+.quick-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.quick {
+    min-height: 122px;
+    padding: 21px 15px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    color: var(--ink);
+    text-align: center;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.quick:hover {
+    transform: translateY(-4px);
+    border-color: var(--brand);
+    box-shadow:
+        0 20px 40px rgba(15, 75, 65, 0.16);
+}
+
+.quick span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 2rem;
+}
+
+
+/* =====================================================
+   INDICADORES DE IMPACTO
+===================================================== */
+
+.impact {
+    background: var(--deep);
+    color: #ffffff;
+}
+
+.impact .section-head {
+    margin-top: 0;
+}
+
+.impact h2 {
+    color: #ffffff;
+}
+
+.impact strong {
+    display: block;
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+.impact span {
+    display: block;
+    color: #c8dfda;
+}
+
+
+/* =====================================================
+   CONTA E GOOGLE ASSISTENTE
+===================================================== */
+
+.account-section {
+    margin-top: 36px;
+}
+
+.assistant-card {
+    background: var(--soft);
+    box-shadow: none;
+}
+
+.assistant-card h3 {
+    margin-top: 6px;
+}
+
+.assistant-card p {
+    margin: 8px 0 16px;
+}
+
+
+/* =====================================================
+   MODO ESCURO
+===================================================== */
+
+body.dark .hero {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(201, 243, 92, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #081613,
+            #122a25
+        );
+}
+
+body.dark .hero-map {
+    border-color: var(--line);
+    background: #1c302c;
+}
+
+body.dark .map-preview {
+    background-color: #1c302c;
+    background-image:
+        linear-gradient(
+            35deg,
+            transparent 46%,
+            rgba(52, 76, 69, 0.72) 47% 53%,
+            transparent 54%
+        ),
+        linear-gradient(
+            145deg,
+            transparent 46%,
+            rgba(52, 76, 69, 0.72) 47% 53%,
+            transparent 54%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(62, 86, 79, 0.38) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(62, 86, 79, 0.38) 1px,
+            transparent 1px
+        );
+}
+
+body.dark .map-preview-street {
+    border-color: #38504a;
+    background: #2d4640;
+}
+
+body.dark .map-toolbar,
+body.dark .map-preview-footer {
+    border-color: #29433e;
+    background: rgba(16, 37, 34, 0.96);
+}
+
+body.dark .map-preview-footer h3 {
+    color: #eff8f4;
+}
+
+body.dark .map-preview-footer p {
+    color: #a1b9b3;
+}
+
+body.dark .preview-pin {
+    border-color: #eff8f4;
+}
+
+
+/* =====================================================
+   ALTO CONTRASTE
+===================================================== */
+
+body.contrast .hero-map {
+    border: 2px solid #000000;
+}
+
+body.contrast .map-preview {
+    background-color: #ffffff;
+}
+
+body.contrast .map-preview-street {
+    border: 2px solid #000000;
+    background: #ffffff;
+}
+
+body.contrast .preview-pin {
+    border-color: #000000;
+    background: #005fcc;
+}
+
+body.contrast .map-toolbar,
+body.contrast .map-preview-footer {
+    border: 2px solid #000000;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1100px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+        max-width: 780px;
+    }
+
+    .hero-map {
+        min-height: 550px;
+    }
+}
+
+@media (max-width: 850px) {
+    .quick-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .hero {
+        padding: 44px 0;
+    }
+
+    .hero-map {
+        min-height: 520px;
+    }
+
+    .map-toolbar {
+        align-items: flex-start;
+    }
+
+    .map-toolbar .btn {
+        display: none;
+    }
+
+    .map-preview-footer {
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .map-preview-footer .btn {
+        width: 100%;
+    }
+
+    .preview-location {
+        bottom: 39%;
+        left: 13%;
+    }
+
+    .preview-pin-one {
+        top: 31%;
+        right: 14%;
+    }
+
+    .preview-pin-two {
+        top: 51%;
+        left: 24%;
+    }
+
+    .preview-pin-three {
+        right: 26%;
+        bottom: 39%;
+    }
+
+    .quick-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 650px) {
+    /* ... outras regras que já tenha aqui ... */
+    
+    .hero-map {
+        min-height: 320px; /* Diminuímos a altura para o mapa não dar tanto zoom */
+    }
+}
+
+@media (max-width: 430px) {
+    /* ... outras regras que já tenha aqui ... */
+    
+    .hero-map {
+        min-height: 280px; /* Ajuste perfeito para o tamanho do ecrã de um telemóvel */
+    }
+}
+
+@media (max-width: 430px) {
+   
+
+    .map-toolbar {
+        top: 14px;
+        right: 14px;
+        left: 14px;
+    }
+
+    .preview-pin {
+        width: 47px;
+        height: 47px;
+        border-width: 4px;
+    }
+
+    .map-preview-footer {
+        padding: 14px;
+    }
+
+    .quick-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
