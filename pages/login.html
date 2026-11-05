@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Entre no Acessibiliza e personalize sua experiência."
+    >
+
+    <meta
+        name="theme-color"
+        content="#076B5D"
+    >
+
+    <title>Entrar | Acessibiliza</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/login.css"
+    >
+</head>
+
+<body>
+    <a
+        class="skip"
+        href="#main"
+    >
+        Pular para o conteúdo
+    </a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a
+                class="brand"
+                href="../index.html"
+            >
+                <span
+                    class="brand-mark"
+                    aria-hidden="true"
+                >
+                    ●
+                </span>
+
+                Acessibiliza
+            </a>
+
+            <div class="header-actions">
+                <button
+                    class="icon-btn"
+                    type="button"
+                    data-theme="contrast"
+                    aria-label="Alternar alto contraste"
+                >
+                    ◐
+                </button>
+
+                <button
+                    class="icon-btn"
+                    type="button"
+                    data-theme="dark"
+                    aria-label="Alternar modo escuro"
+                >
+                    ☾
+                </button>
+
+                <a
+                    class="btn btn-secondary"
+                    href="acessibilidade.html"
+                >
+                    Configurar acessibilidade
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main
+        id="main"
+        class="login-page"
+    >
+        <div class="container login-layout">
+            <section class="login-introduction">
+                <span class="eyebrow">
+                    EXPERIÊNCIA PERSONALIZADA
+                </span>
+
+                <h1 class="title">
+                    Entre para seguir seu caminho.
+                </h1>
+
+                <p class="subtitle">
+                    Salve lugares, mantenha seu histórico
+                    de rotas e receba recomendações de
+                    acordo com suas necessidades de
+                    acessibilidade.
+                </p>
+
+                <div class="benefit-list">
+                    <article class="benefit">
+                        <span
+                            class="benefit-icon"
+                            aria-hidden="true"
+                        >
+                            ♿
+                        </span>
+
+                        <div>
+                            <h2>
+                                Rotas personalizadas
+                            </h2>
+
+                            <p>
+                                Caminhos priorizados conforme
+                                seu perfil de mobilidade.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="benefit">
+                        <span
+                            class="benefit-icon"
+                            aria-hidden="true"
+                        >
+                            ◉
+                        </span>
+
+                        <div>
+                            <h2>
+                                Recursos inclusivos
+                            </h2>
+
+                            <p>
+                                Voz, alto contraste, foco
+                                visível e navegação por
+                                teclado.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="benefit">
+                        <span
+                            class="benefit-icon"
+                            aria-hidden="true"
+                        >
+                            🎙
+                        </span>
+
+                        <div>
+                            <h2>
+                                Suporte por voz
+                            </h2>
+
+                            <p>
+                                Ouça orientações e use comandos
+                                simples durante a experiência.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section
+                class="card login-card"
+                aria-labelledby="login-title"
+            >
+                <div class="login-card-header">
+                    <span
+                        class="brand-mark login-logo"
+                        aria-hidden="true"
+                    >
+                        ●
+                    </span>
+
+                    <div>
+                        <span class="eyebrow">
+                            BEM-VINDO
+                        </span>
+
+                        <h2 id="login-title">
+                            Acesse sua conta
+                        </h2>
+                    </div>
+                </div>
+
+                <form id="login-form">
+                    <div class="field">
+                        <label for="login-name">
+                            Nome
+                        </label>
+
+                        <input
+                            class="input"
+                            id="login-name"
+                            name="name"
+                            type="text"
+                            autocomplete="name"
+                            placeholder="Como podemos chamar você?"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="login-email">
+                            E-mail
+                        </label>
+
+                        <input
+                            class="input"
+                            id="login-email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            placeholder="nome@exemplo.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="login-password">
+                            Senha
+                        </label>
+
+                        <div class="password-control">
+                            <input
+                                class="input"
+                                id="login-password"
+                                name="password"
+                                type="password"
+                                autocomplete="current-password"
+                                placeholder="Digite sua senha"
+                                minlength="6"
+                                required
+                            >
+
+                            <button
+                                class="show-password"
+                                id="show-password"
+                                type="button"
+                                aria-label="Mostrar senha"
+                                aria-pressed="false"
+                            >
+                                ◉
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember-option">
+                            <input
+                                id="remember-account"
+                                type="checkbox"
+                            >
+
+                            <span>
+                                Manter minha conta conectada
+                            </span>
+                        </label>
+
+                        <button
+                            class="text-action"
+                            id="forgot-password"
+                            type="button"
+                        >
+                            Esqueci minha senha
+                        </button>
+                    </div>
+
+                    <button
+                        class="btn btn-primary login-submit"
+                        type="submit"
+                    >
+                        Entrar no Acessibiliza
+                    </button>
+                </form>
+
+                <button
+    class="btn btn-secondary login-submit"
+    id="guest-login"
+    type="button"
+    style="margin-top: 10px"
+>
+    Entrar como visitante
+</button>
+
+                <div class="login-divider">
+                    <span>ou</span>
+                </div>
+
+                <button
+                    class="google-login"
+                    id="google-login"
+                    type="button"
+                >
+                    <span
+                        class="google-symbol"
+                        aria-hidden="true"
+                    >
+                        G
+                    </span>
+
+                    Continuar com Google
+                </button>
+
+                <section
+                    class="assistant-panel"
+                    aria-labelledby="assistant-title"
+                >
+                    <div class="assistant-heading">
+                        <span
+                            class="assistant-icon"
+                            aria-hidden="true"
+                        >
+                            🎙
+                        </span>
+
+                        <div>
+                            <span class="eyebrow">
+                                SUPORTE POR VOZ
+                            </span>
+
+                            <h3 id="assistant-title">
+                                Use assistência por voz
+                            </h3>
+                        </div>
+                    </div>
+
+                    <p>
+                        Ouça as instruções desta página ou
+                        conheça os recursos oficiais do
+                        Google Assistente.
+                    </p>
+
+                    <div class="assistant-actions">
+                        <button
+                            class="btn btn-lime"
+                            id="read-login-page"
+                            type="button"
+                        >
+                            Ouvir esta página
+                        </button>
+
+                        <a
+                            class="btn btn-secondary"
+                            href="https://assistant.google.com/intl/pt_br/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Conhecer Google Assistente
+                        </a>
+                    </div>
+
+                    <p
+                        class="assistant-status"
+                        id="assistant-status"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </section>
+
+                <div class="accessibility-shortcut">
+                    <span aria-hidden="true">
+                        ♿
+                    </span>
+
+                    <p>
+                        Precisa adaptar a experiência antes
+                        de entrar?
+                    </p>
+
+                    <a href="acessibilidade.html">
+                        Configurar agora
+                    </a>
+                </div>
+
+                <p class="login-disclaimer">
+                    Este MVP utiliza uma autenticação
+                    demonstrativa. Nenhuma senha é enviada
+                    ou armazenada.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <div
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+</html>

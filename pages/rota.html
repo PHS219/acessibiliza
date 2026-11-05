@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Escolha uma forma de locomoção e consulte uma rota acessível no Acessibiliza."
+    >
+
+    <meta
+        name="theme-color"
+        content="#076B5D"
+    >
+
+    <title>Rota acessível | Acessibiliza</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pages.css"
+    >
+</head>
+
+<body>
+    <a
+        class="skip"
+        href="#main"
+    >
+        Pular para o conteúdo
+    </a>
+
+    <!-- CABEÇALHO -->
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a
+                class="brand"
+                href="../index.html"
+                aria-label="Acessibiliza, página inicial"
+            >
+                <span
+                    class="brand-mark"
+                    aria-hidden="true"
+                >
+                    ●
+                </span>
+
+                <span>Acessibiliza</span>
+                
+            </a>
+  
+            <nav
+                class="main-nav"
+                aria-label="Navegação principal"
+            >
+                <a href="../home.html">
+                    Início
+                </a>
+
+                <a href="explorar.html">
+                    Explorar
+                </a>
+
+                <a
+                    class="active"
+                    href="historico.html"
+                >
+                    Rotas
+                </a>
+
+                <a href="ranking.html">
+                    Ranking
+                </a>
+
+                <a href="perfil.html">
+                    Perfil
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <button
+                    class="icon-btn"
+                    type="button"
+                    data-theme="contrast"
+                    aria-label="Alternar alto contraste"
+                    title="Alto contraste"
+                >
+                    ◐
+                </button>
+
+                <button
+                    class="icon-btn"
+                    type="button"
+                    data-theme="dark"
+                    aria-label="Alternar modo escuro"
+                    title="Modo escuro"
+                >
+                    ☾
+                </button>
+
+                <a
+                    class="btn btn-secondary"
+                    href="login.html"
+                >
+                    Entrar
+                </a>
+
+                <a
+                    class="btn btn-primary"
+                    href="explorar.html"
+                >
+                    Encontrar local
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main id="main">
+        <section class="page-hero route-page-hero">
+            <div class="container">
+                <span class="eyebrow">
+                    ROTA PERSONALIZADA
+                </span>
+
+                <h1 class="title">
+                    Escolha como você quer chegar
+                </h1>
+
+                <p class="subtitle">
+                    Compare opções inclusivas de locomoção e
+                    veja os recursos de acessibilidade disponíveis
+                    em cada trajeto.
+                </p>
+            </div>
+        </section>
+
+        <section class="page container route-page-layout">
+
+            <!-- COLUNA DO MAPA -->
+
+            <div class="route-map-column">
+                <section
+                    class="card accessible-map"
+                    aria-labelledby="route-map-title"
+                >
+                    <div class="route-map-header">
+                        <div>
+                            <span class="eyebrow">
+                                ROTA ACESSÍVEL
+                            </span>
+
+                            <h2 id="route-map-title">
+                                Sua localização até
+                                <span id="map-destination">
+                                    Casa Girassol
+                                </span>
+                            </h2>
+                        </div>
+
+                        <span
+                            class="route-status"
+                            id="route-status"
+                        >
+                            Excelente · 0 obstáculos
+                        </span>
+                    </div>
+
+                    <!-- MAPA SVG -->
+
+                    <svg
+                        class="accessible-map-svg"
+                        viewBox="0 0 900 650"
+                        preserveAspectRatio="xMidYMid meet"
+                        role="img"
+                        aria-labelledby="route-title route-description"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <title id="route-title">
+                            Caminho acessível até o destino
+                        </title>
+
+                        <desc id="route-description">
+                            Mapa ilustrativo com ruas, localização
+                            atual, destino e uma rota acessível
+                            conectando os dois pontos.
+                        </desc>
+
+                        <!-- Fundo -->
+
+                        <rect
+                            width="900"
+                            height="650"
+                            fill="#EAF2EE"
+                        ></rect>
+
+                        <!-- Quadras -->
+
+                        <g
+                            fill="#DCE8E2"
+                            stroke="#D2E0DA"
+                            stroke-width="2"
+                        >
+                            <rect
+                                x="35"
+                                y="35"
+                                width="175"
+                                height="115"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="260"
+                                y="35"
+                                width="170"
+                                height="115"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="490"
+                                y="35"
+                                width="175"
+                                height="125"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="720"
+                                y="35"
+                                width="145"
+                                height="130"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="35"
+                                y="220"
+                                width="175"
+                                height="135"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="260"
+                                y="215"
+                                width="170"
+                                height="140"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="490"
+                                y="225"
+                                width="175"
+                                height="140"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="720"
+                                y="220"
+                                width="145"
+                                height="145"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="35"
+                                y="430"
+                                width="175"
+                                height="175"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="280"
+                                y="425"
+                                width="170"
+                                height="180"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="510"
+                                y="435"
+                                width="165"
+                                height="170"
+                                rx="10"
+                            ></rect>
+
+                            <rect
+                                x="730"
+                                y="425"
+                                width="135"
+                                height="180"
+                                rx="10"
+                            ></rect>
+                        </g>
+
+                        <!-- Ruas -->
+
+                        <g
+                            fill="none"
+                            stroke="#FFFFFF"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M -30 185 C 210 165, 400 190, 930 185"
+                                stroke-width="42"
+                            ></path>
+
+                            <path
+                                d="M -30 390 C 185 370, 440 410, 930 385"
+                                stroke-width="48"
+                            ></path>
+
+                            <path
+                                d="M 225 -30 C 225 150, 215 350, 245 700"
+                                stroke-width="40"
+                            ></path>
+
+                            <path
+                                d="M 455 -30 C 450 170, 465 360, 470 695"
+                                stroke-width="42"
+                            ></path>
+
+                            <path
+                                d="M 685 -30 C 675 170, 690 410, 705 700"
+                                stroke-width="38"
+                            ></path>
+
+                            <path
+                                d="M -70 610 C 170 515, 300 500, 465 400 C 640 295, 740 230, 955 95"
+                                stroke-width="43"
+                            ></path>
+                        </g>
+
+                        <!-- Sombra da rota -->
+
+                        <path
+                            d="M 145 535 C 200 470, 255 455, 315 415 C 380 372, 438 345, 480 288 C 535 215, 595 185, 675 156 C 720 140, 760 128, 798 105"
+                            fill="none"
+                            stroke="#B4D3CA"
+                            stroke-width="25"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+
+                        <!-- Rota alinhada -->
+
+                        <path
+                            class="route-path"
+                            id="route-path"
+                            d="M 145 535 C 200 470, 255 455, 315 415 C 380 372, 438 345, 480 288 C 535 215, 595 185, 675 156 C 720 140, 760 128, 798 105"
+                            fill="none"
+                            stroke="#076B5D"
+                            stroke-width="11"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-dasharray="18 10"
+                        ></path>
+
+                        <!-- Pontos acessíveis intermediários -->
+
+                        <g
+                            fill="#FFFFFF"
+                            stroke="#076B5D"
+                            stroke-width="5"
+                        >
+                            <circle
+                                cx="315"
+                                cy="415"
+                                r="13"
+                            ></circle>
+
+                            <circle
+                                cx="480"
+                                cy="288"
+                                r="13"
+                            ></circle>
+
+                            <circle
+                                cx="675"
+                                cy="156"
+                                r="13"
+                            ></circle>
+                        </g>
+
+                        <!-- Origem -->
+
+                        <circle
+                            cx="145"
+                            cy="535"
+                            r="30"
+                            fill="#FFFFFF"
+                            stroke="#C8DCD5"
+                            stroke-width="3"
+                        ></circle>
+
+                        <circle
+                            cx="145"
+                            cy="535"
+                            r="17"
+                            fill="#3B70DB"
+                        ></circle>
+
+                        <circle
+                            cx="145"
+                            cy="535"
+                            r="7"
+                            fill="#FFFFFF"
+                        ></circle>
+
+                        <!-- Destino -->
+
+                        <circle
+                            cx="798"
+                            cy="105"
+                            r="34"
+                            fill="#FFFFFF"
+                            stroke="#C8DCD5"
+                            stroke-width="3"
+                        ></circle>
+
+                        <circle
+                            cx="798"
+                            cy="105"
+                            r="21"
+                            fill="#C9F35C"
+                            stroke="#076B5D"
+                            stroke-width="6"
+                        ></circle>
+                    </svg>
+
+                    <!-- Identificação da origem -->
+
+                    <div class="route-map-label route-origin-label">
+                        <span class="route-label-icon origin">
+                            ●
+                        </span>
+
+                        <div>
+                            <strong>
+                                Sua localização
+                            </strong>
+
+                            <small>
+                                Av. Paulista
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Identificação do destino -->
+
+                    <div class="route-map-label route-destination-label">
+                        <span class="route-label-icon destination">
+                            ⌖
+                        </span>
+
+                        <div>
+                            <strong id="destination-label">
+                                Casa Girassol
+                            </strong>
+
+                            <small>
+                                Entrada acessível
+                            </small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Resumo da rota -->
+
+                <section class="card pad route-summary">
+                    <div>
+                        <span class="eyebrow">
+                            RESUMO DO TRAJETO
+                        </span>
+
+                        <h2>
+                            Melhor rota para você
+                        </h2>
+                    </div>
+
+                    <div class="route-summary-metrics">
+                        <div>
+                            <strong id="route-time">
+                                8 min
+                            </strong>
+
+                            <small>
+                                Tempo estimado
+                            </small>
+                        </div>
+
+                        <div>
+                            <strong id="route-distance">
+                                1,2 km
+                            </strong>
+
+                            <small>
+                                Distância
+                            </small>
+                        </div>
+
+                        <div>
+                            <strong id="route-accessibility">
+                                Excelente
+                            </strong>
+
+                            <small>
+                                Acessibilidade
+                            </small>
+                        </div>
+
+                        <div>
+                            <strong id="route-obstacles">
+                                0
+                            </strong>
+
+                            <small>
+                                Obstáculos críticos
+                            </small>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLUNA DE OPÇÕES -->
+
+            <aside class="route-options-column">
+
+                <!-- Destino selecionado -->
+
+                <section class="card pad destination-card">
+                    <span class="badge">
+                        DESTINO SELECIONADO
+                    </span>
+
+                    <h2 id="destination">
+                        Casa Girassol
+                    </h2>
+
+                    <p class="muted">
+                        1,2 km · rota sem degraus
+                    </p>
+                </section>
+
+                <!-- Formas de locomoção -->
+
+                <section
+                    class="card pad transport-section"
+                    aria-labelledby="transport-title"
+                >
+                    <div class="section-title">
+                        <div>
+                            <span class="eyebrow">
+                                COMO IR
+                            </span>
+
+                            <h2 id="transport-title">
+                                Formas de locomoção
+                            </h2>
+                        </div>
+
+                        <span class="transport-count">
+                            7 opções
+                        </span>
+                    </div>
+
+                    <div class="transport-options">
+
+                        <!-- Caminhada -->
+
+                        <button
+                            class="transport-option"
+                            type="button"
+                            data-transport="Caminhada acessível"
+                            data-time="16 min"
+                            data-distance="1,2 km"
+                            data-accessibility="Boa"
+                            data-obstacles="1"
+                            aria-pressed="false"
+                        >
+                            <span class="transport-icon">
+                                🚶
+                            </span>
+
+                            <span class="transport-description">
+                                <strong>
+                                    Caminhada acessível
+                                </strong>
+
+                                <small>
+                                    Calçadas largas e travessias
+                                    rebaixadas
+                                </small>
+
+                                <span class="transport-features">
+                                    <span>Sem escadas</span>
+                                    <span>1 inclinação</span>
+                                </span>
+                            </span>
+
+                            <span class="transport-meta">
+                                <strong>16 min</strong>
+                                <small>Boa</small>
+                            </span>
+
+                            <span class="transport-check">
+                                ✓
+                            </span>
+                        </button>
+
+                        <!-- Cadeira manual -->
+
+                        <button
+                            class="transport-option"
+                            type="button"
+                            data-transport="Cadeira de rodas manual"
+                            data-time="12 min"
+                            data-distance="1,2 km"
+                            data-accessibility="Muito boa"
+                            data-obstacles="0"
+                            aria-pressed="false"
+                        >
+                            <span class="transport-icon">
+                                ♿
+                            </span>
+
+                            <span class="transport-description">
+                                <strong>
+                                    Cadeira de rodas manual
+                                </strong>
+
+                                <small>
+                                    Percurso nivelado e travessias
+                                    acessíveis
+                                </small>
+
+                                <span class="transport-features">
+                                    <span>Sem degraus</span>
+                                    <span>Piso regular</span>
+                                </span>
+                            </span>
+
+                            <span class="transport-meta">
+                                <strong>12 min</strong>
+                                <small>Muito boa</small>
+                            </span>
+
+                            <span class="transport-check">
+                                ✓
+                            </span>
+                        </button>
+
+                        <!-- Cadeira motorizada -->
+
+                        <button
+                            class="transport-option active"
+                            type="button"
+                            data-transport="Cadeira motorizada"
+                            data-time="8 min"
+                            data-distance="1,2 km"
+                            data-accessibility="Excelente"
+                            data-obstacles="0"
+                            aria-pressed="true"
+                        >
+                            <span class="transport-icon">
+                                ♿
+                            </span>
+
+                            <span class="transport-description">
+                                <strong>
+                                    Cadeira motorizada
+                                </strong>
+
+                                <small>
+                                    Rota recomendada para seu perfil
+                                </small>
+
+                                <span class="transport-features">
+                                    <span>100% acessível</span>
+                                    <span>Recomendada</span>
+                                </span>
+                            </span>
+
+                            <span class="transport-meta">
+                                <strong>8 min</strong>
+                                <small>Excelente</small>
+                            </span>
+
+                            <span class="transport-check">
+                                ✓
+                            </span>
+                        </button>
+
+                        <!-- Transporte público -->
+
+                        <button
+                            class="transport-option"
+                            type="button"
+                            data-transport="Transporte público acessível"
+                            data-time="18 min"
+                            data-distance="2,1 km"
+                            data-accessibility="Muito boa"
+                            data-obstacles="0"
+                            aria-pressed="false"
+                        >
+                            <span class="transport-icon">
+                                🚌
+                            </span>
+
+                            <span class="transport-description">
+                                <strong>
+                                    Transporte público acessível
+                                </strong>
+
+                                <small>
+                                    Ônibus com elevador e espaço
+                                    reservado
+                                </small>
+
+                                <span class="transport-features">
+                                    <span>Elevador</span>
+                                    <span>Assento reservado</span>
+                                </span>
+                            </span>
+
+                            <span class="transport-meta">
+                                <strong>18 min</strong>
+                                <small>Muito boa</small>
+                            </span>
+
+                            <span class="transport-check">
+                                ✓
+                            </span>
+                        </button>
+
+                        <!-- Veículo adaptado -->
+
+                        <button
+                            class="transport-option"
+                            type="button"
+                            data-transport="Veículo adaptado"
+                            data-time="5 min"
+                            data-distance="1,4 km"
+                            data-accessibility="Excelente"
+                            data-obstacles="0"
+                            aria-pressed="false"
+                        >
+                            <span class="transport-icon">
+                                🚙
+                            </span>
+
+                            <span class="transport-description">
+                                <strong>
+                                    Veículo adaptado
+                                </strong>
+
+                                <small>
+                                    Veículo com rampa e motorista
+                                    preparado
+                                </small>
+
+                                <span class="transport-features">
+                                    <span>Rampa</span>
+                                    <span>Espaço para cadeira</span>
+                                </span>
+                            </span>
+
+                            <span class="transport-meta">
+                                <strong>5 min</strong>
+                                <small>Excelente</small>
+                            </span>
+
+                            <span class="transport-check">
+                                ✓
+                            </span>
+                        </button>
+
+                        <!-- Bicicleta adaptada -->
+
+                        <button
+                            class="transport-option"
+                            type="button"
+                            data-transport="Bicicleta adaptada"
+                            data-time="7 min"
+                            data-distance="1,5 km"
+                            data-accessibility="Boa"
+                            data-obstacles="1"
+                            aria-pressed="false"
+                        >
+                            <span class="transport-icon">
+                                🚲
+                            </span>
+
+                            <span class="transport-description">
+                                <strong>
+                                    Bicicleta adaptada
+                                </strong>
+
+                                <small>
+                                    Triciclo ou handbike em ciclofaixa
+                                </small>
+
+                                <span class="transport-features">
+                                    <span>Triciclo</span>
+                                    <span>Ciclofaixa</span>
+                                </span>
+                            </span>
+
+                            <span class="transport-meta">
+                                <strong>7 min</strong>
+                                <small>Boa</small>
+                            </span>
+
+                            <span class="transport-check">
+                                ✓
+                            </span>
+                        </button>
+
+                        <!-- Transporte assistido -->
+
+                        <button
+                            class="transport-option"
+                            type="button"
+                            data-transport="Transporte assistido"
+                            data-time="10 min"
+                            data-distance="1,4 km"
+                            data-accessibility="Excelente"
+                            data-obstacles="0"
+                            aria-pressed="false"
+                        >
+                            <span class="transport-icon">
+                                🤝
+                            </span>
+
+                            <span class="transport-description">
+                                <strong>
+                                    Transporte assistido
+                                </strong>
+
+                                <small>
+                                    Apoio no embarque e desembarque
+                                </small>
+
+                                <span class="transport-features">
+                                    <span>Acompanhamento</span>
+                                    <span>Assistência</span>
+                                </span>
+                            </span>
+
+                            <span class="transport-meta">
+                                <strong>10 min</strong>
+                                <small>Excelente</small>
+                            </span>
+
+                            <span class="transport-check">
+                                ✓
+                            </span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Instruções -->
+
+                <section class="card pad route-instructions">
+                    <span class="eyebrow">
+                        PASSO A PASSO
+                    </span>
+
+                    <h2>
+                        Instruções da rota
+                    </h2>
+
+                    <div class="route-step">
+                        <span>1</span>
+
+                        <div>
+                            <strong>
+                                Siga pela Av. Paulista
+                            </strong>
+
+                            <p>
+                                Utilize a calçada do lado direito.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="route-step">
+                        <span>2</span>
+
+                        <div>
+                            <strong>
+                                Atravesse na faixa acessível
+                            </strong>
+
+                            <p>
+                                Há rampa rebaixada e sinal sonoro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="route-step">
+                        <span>3</span>
+
+                        <div>
+                            <strong>
+                                Vire à direita
+                            </strong>
+
+                            <p>
+                                Continue por aproximadamente
+                                300 metros.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="route-step">
+                        <span>4</span>
+
+                        <div>
+                            <strong>
+                                Chegada ao destino
+                            </strong>
+
+                            <p>
+                                A entrada acessível estará do lado
+                                direito.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ações -->
+
+                <div class="route-actions">
+                    <button
+                        class="btn btn-primary"
+                        id="start-route"
+                        type="button"
+                    >
+                        Iniciar navegação
+                    </button>
+
+                    <button
+                        class="btn btn-secondary"
+                        id="finish"
+                        type="button"
+                    >
+                        Simular conclusão
+                    </button>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <!-- Mensagens do sistema -->
+
+    <div
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <!-- JavaScript -->
+
+    <script src="../js/app.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/rota.js"></script>
+    
+</body>
+</html>

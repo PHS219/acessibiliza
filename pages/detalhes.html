@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1"
+    >
+
+    <meta
+        name="theme-color"
+        content="#076b5d"
+    >
+
+    <title>Detalhes do local | Acessibiliza</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pages.css"
+    >
+</head>
+
+<body>
+   <a
+        class="skip"
+        href="#main"
+    >
+        Pular para o conteúdo
+    </a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a
+                class="brand"
+                href="../index.html"
+            >
+                <span class="brand-mark">
+                    ●
+                </span>
+
+                Acessibiliza
+            </a>
+
+            <nav
+                class="main-nav"
+                aria-label="Principal"
+            >
+                <a
+                    data-page="inicio"
+                    href="../home.html"
+                >
+                    Início
+                </a>
+
+                <a
+                    data-page="explorar"
+                    href="explorar.html"
+                >
+                    Explorar
+                </a>
+
+                <a
+                    data-page="historico"
+                    href="historico.html"
+                >
+                    Rotas
+                </a>
+
+                <a
+                    data-page="ranking"
+                    href="ranking.html"
+                >
+                    Ranking
+                </a>
+
+                <a
+                    data-page="perfil"
+                    href="perfil.html"
+                >
+                    Perfil
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <button
+                    class="icon-btn"
+                    data-theme="contrast"
+                    aria-label="Alto contraste"
+                >
+                    ◐
+                </button>
+
+                <button
+                    class="icon-btn"
+                    data-theme="dark"
+                    aria-label="Modo escuro"
+                >
+                    ☾
+                </button>
+
+                <a
+                    class="btn btn-primary"
+                    href="explorar.html"
+                >
+                    Encontrar local
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page container">
+            <div class="detail-grid">
+                <div
+                    id="visual"
+                    class="card detail-visual"
+                >
+                    🍴
+                </div>
+
+                <div class="stack">
+                    <div>
+                        <span class="badge">
+                            98% compatível
+                        </span>
+
+                        <h1
+                            id="name"
+                            class="title"
+                            style="font-size:3.4rem"
+                        >
+                            Casa Girassol
+                        </h1>
+
+                        <p
+                            id="meta"
+                            class="subtitle"
+                        ></p>
+
+                        <p
+                            id="score"
+                            class="score"
+                            style="margin-top:10px"
+                        ></p>
+                    </div>
+
+                    <div class="card pad">
+                        <h2>
+                            Recursos de acessibilidade
+                        </h2>
+
+                        <div
+                            id="features"
+                            class="access-list"
+                            style="margin-top:14px"
+                        ></div>
+                    </div>
+
+                    <div class="chips">
+                        <a
+                            id="goRoute"
+                            class="btn btn-primary"
+                            href="rota.html"
+                        >
+                            Traçar rota
+                        </a>
+
+                        <a
+                            class="btn btn-secondary"
+                            href="avaliar.html"
+                        >
+                            Avaliar local
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-head">
+                <h2>
+                    O que a comunidade diz
+                </h2>
+            </div>
+
+            <div class="grid cols-2">
+                <article class="card pad">
+                    <span class="score">
+                        ★ 5,0
+                    </span>
+
+                    <h3>
+                        Entrada realmente acessível
+                    </h3>
+
+                    <p class="muted">
+                        Circulação ampla e atendimento preparado.
+                    </p>
+                </article>
+
+                <article class="card pad">
+                    <span class="score">
+                        ★ 4,8
+                    </span>
+
+                    <h3>
+                        Boa comunicação
+                    </h3>
+
+                    <p class="muted">
+                        Informações claras e cardápio visual.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a
+                    class="brand"
+                    href="../index.html"
+                    style="color:white"
+                >
+                    <span class="brand-mark">
+                        ●
+                    </span>
+
+                    Acessibiliza
+                </a>
+
+                <p>
+                    Mobilidade e informação para uma cidade mais inclusiva.
+                </p>
+            </div>
+
+            <div>
+                <strong>
+                    Explorar
+                </strong>
+
+                <p>
+                    <a href="explorar.html">
+                        Locais acessíveis
+                    </a>
+                </p>
+
+                <p>
+                    <a href="ranking.html">
+                        Ranking
+                    </a>
+                </p>
+            </div>
+
+            <div>
+                <strong>
+                    Suporte
+                </strong>
+
+                <p>
+                    <a href="acessibilidade.html">
+                        Central de acessibilidade
+                    </a>
+                </p>
+
+                <p>
+                    <a href="perfil.html">
+                        Preferências
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/detalhes.js"></script>
+</body>
+</html>
