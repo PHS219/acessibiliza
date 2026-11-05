@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acessibiliza, plataforma de mobilidade inclusiva para encontrar locais e rotas acessíveis.">
+    <meta name="theme-color" content="#076B5D">
+
+    <title>Início | Acessibiliza</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <a class="skip" href="#main">
+        Pular para o conteúdo
+    </a>
+
+    <!-- CABEÇALHO -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Acessibiliza, página inicial">
+                <span class="brand-mark" aria-hidden="true">●</span>
+                <span>Acessibiliza</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a class="active" data-page="inicio" href="index.html">Início</a>
+                <a data-page="explorar" href="pages/explorar.html">Explorar</a>
+                <a data-page="historico" href="pages/historico.html">Rotas</a>
+                <a data-page="ranking" href="pages/ranking.html">Ranking</a>
+                <a data-page="perfil" href="pages/perfil.html">Perfil</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn" type="button" data-theme="contrast" aria-label="Alternar alto contraste" title="Alto contraste">
+                    ◐
+                </button>
+
+                <button class="icon-btn" type="button" data-theme="dark" aria-label="Alternar modo escuro" title="Modo escuro">
+                    ☾
+                </button>
+
+                <a class="btn btn-secondary" href="pages/login.html">Entrar</a>
+                <a class="btn btn-primary" href="pages/explorar.html">Encontrar local</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">MOBILIDADE PARA TODOS</span>
+                    <h1 class="title">A cidade mais acessível começa com você.</h1>
+                    <p class="subtitle">
+                        Encontre locais inclusivos, compare recursos de acessibilidade e siga rotas adequadas às suas necessidades.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="pages/explorar.html">Explorar locais</a>
+                        <a class="btn btn-secondary" href="pages/acessibilidade.html">Configurar acessibilidade</a>
+                    </div>
+
+                    <div class="chips" aria-label="Recursos principais" style="margin-top: 24px">
+                        <span class="badge">♿ Rotas sem degraus</span>
+                        <span class="badge">◉ Recursos para visão</span>
+                        <span class="badge">◖ Alertas visuais</span>
+                        <span class="badge">🎙 Orientação por voz</span>
+                    </div>
+                </div>
+
+                <!-- MAPA -->
+                <div class="hero-panel">
+                    <div class="hero-map card">
+                        <div class="map-toolbar">
+                            <div class="map-heading">
+                                <span class="eyebrow">MAPA DE ACESSIBILIDADE</span>
+                                <h2>Explore a cidade</h2>
+                            </div>
+                            <a class="btn btn-primary" href="pages/explorar.html">Abrir busca</a>
+                        </div>
+
+                        <svg class="map-route-svg" viewBox="0 0 900 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="map-title map-description" xmlns="http://www.w3.org/2000/svg">
+                            <title id="map-title">Rota acessível até a Casa Girassol</title>
+                            <desc id="map-description">Mapa ilustrativo apresentando a rota entre a localização atual e a Casa Girassol.</desc>
+
+                            <!-- RUAS -->
+                            <path class="map-street street-one" d="M -30 420 C 180 370, 300 270, 510 300 S 760 360, 950 230" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path class="map-street street-two" d="M 160 -20 C 250 130, 300 230, 320 600" fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path class="map-street street-three" d="M 600 -20 C 560 120, 590 210, 760 600" fill="none" stroke="#FFFFFF" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path class="map-street street-four" d="M -20 160 C 180 210, 330 180, 480 100 S 750 80, 940 160" fill="none" stroke="#FFFFFF" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"></path>
+
+<!-- SOMBRA DA ROTA -->
+                            <path
+                                class="accessible-route-shadow"
+                                d="M 254 399 C 268 336, 317 308, 366 288 C 422 265, 450 214, 510 200 C 566 186, 622 214, 646 256"
+                                fill="none"
+                                stroke="#B8D6CE"
+                                stroke-width="20"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+
+                            <!-- ROTA ACESSÍVEL -->
+                            <path
+                                class="accessible-route"
+                                d="M 254 399 C 268 336, 317 308, 366 288 C 422 265, 450 214, 510 200 C 566 186, 622 214, 646 256"
+                                fill="none"
+                                stroke="#076B5D"
+                                stroke-width="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-dasharray="16 9"
+                            ></path>
+
+                            <!-- PONTO INICIAL -->
+                            <circle class="route-start-ring" cx="254" cy="399" r="19" fill="#FFFFFF" stroke="#D8E8E3" stroke-width="2"></circle>
+                            <circle class="route-start" cx="254" cy="399" r="10" fill="#3B70DB"></circle>
+                            <text x="254" y="439" font-family="inherit" font-size="14" font-weight="700" fill="#064b44" text-anchor="middle">Local Atual</text>
+
+                            <!-- PONTO FINAL -->
+                            <circle class="route-end-ring" cx="646" cy="256" r="23" fill="#FFFFFF" stroke="#D8E8E3" stroke-width="2"></circle>
+                            <circle class="route-end" cx="646" cy="256" r="14" fill="#C9F35C" stroke="#076B5D" stroke-width="4"></circle>
+                            <text x="646" y="296" font-family="inherit" font-size="14" font-weight="700" fill="#064b44" text-anchor="middle">Destino</text>
+                        </svg>
+
+
+                        <!-- ORIGEM E DESTINO -->
+       
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ (FOOTER) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand" href="index.html" style="color:white">
+                    <span class="brand-mark">●</span>
+                    Acessibiliza
+                </a>
+                <p>Mobilidade e informação para uma cidade mais inclusiva.</p>
+            </div>
+
+            <div>
+                <strong>Explorar</strong>
+                <p><a href="pages/explorar.html">Locais acessíveis</a></p>
+                <p><a href="pages/ranking.html">Ranking</a></p>
+            </div>
+
+            <div>
+                <strong>Suporte</strong>
+                <p><a href="pages/acessibilidade.html">Central de acessibilidade</a></p>
+                <p><a href="pages/perfil.html">Preferências</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <!-- SCRIPTS -->
+    <script src="js/app.js"></script>
+    <script>
+        // Inicia as configurações e marca o menu "Início" como ativo
+        window.Acessibiliza.init('inicio');
+    </script>
+</body>
+</html>
